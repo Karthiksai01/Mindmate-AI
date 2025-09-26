@@ -21,7 +21,6 @@ export const newMessage = async (req, res) => {
 
     let { chatId, message } = req.body;
     const userId = req.user.id;
-
     if (!message) {
       return res.status(400).json({ error: "Message is required" });
     }
